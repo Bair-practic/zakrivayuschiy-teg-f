@@ -9,4 +9,8 @@
     --background-color: #000000;
     --main-font-width: 785;
     --accent-font-width: 465;
+    --background-gradient: 
+                            repeating-linear-gradient(to right,#000,#000 2px, transparent 2px, transparent 4px),
+                            repeating-linear-gradient(to bottom,#000, #000 2px, transparent 2px, transparent 4px),
+                            repeating-linear-gradient(to bottom, #007f0c, #004306);
 }
