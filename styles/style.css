@@ -45,12 +45,12 @@
   background-color: var(--background-color);
   outline: 2px solid var(--accent-color, #000);
   margin-top: 102px;
-  margin-bottom: 102px;
+  margin-bottom: 104px;
 }
 
 .header__title {
   color: var(--accent-color, #000);
-  font-family: "Press Start 2P";
+  font-family: var(--accent-font, sans-serif);
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);;
   font-style: normal;
   margin-top: 136px;
@@ -61,7 +61,7 @@
 
 .header__subtitle {
   color: var(--accent-color, #000);
-  font-family: "Press Start 2P";
+  font-family: var(--accent-font, sans-serif);
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   font-style: normal;
   font-weight: 400;
@@ -72,7 +72,7 @@
 .header__theme-menu {
   padding: 4px 0 24px 18px;
   color: var(--accent-color, #000);
-  font-family: "Press Start 2P";
+  font-family: var(--accent-font, sans-serif);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -125,7 +125,7 @@
 
 .card {
   background-color: #ffffff;
-  border: 2px solid var(--accent-color, #000);
+  outline: 2px solid var(--accent-color, #000);
 }
 
 .card .card__title {
@@ -144,14 +144,15 @@
 
 .card__img {
   width: 100%;
-  border-top: 2px solid var(--Themes-mainColor, #000);
-  border-bottom: 2px solid var(--Themes-mainColor, #000);
 }
 
 .card__text {
-  margin: 26px;
+  margin: 25px;
 }
 
+.card__text + .card__text {
+  margin-top: 27px;
+}
 .button {
   border: transparent;
   background-color: transparent;
@@ -167,15 +168,14 @@
 }
 
 .button__text {
-  position: relative;
-  z-index: 2;
   color: var(--accent-color, #000);
-  font-family: "Press Start 2P";
+  font-family: var(--accent-font, sans-serif);
   font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 90%; /* 12.6px */
-  margin: 9px 17px;
+  
+}
+
+.card__icon-button {
+  padding-top: 8px;
 }
 
 .card__like-button {
@@ -183,4 +183,33 @@
   width: 130px;
   height: 38px;
   cursor: pointer;
+  padding-top: 6px;
+}
+
+.button__save {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-height: 51px;
+  margin-inline-end: 180px;
+  margin-inline-start: 181px;
+  background-color: var(--background-color, #FFF);
+  border: transparent;
+  outline: 2px solid var(--accent-color);
+  font-family: var(--accent-font, sans-serif);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 12.6px */
+
+}
+
+.button__save-svg {
+  height: 21px;
+  width: 21px;
+}
+
+.button__save-text {
+  padding-inline-end: 2px;
 }
