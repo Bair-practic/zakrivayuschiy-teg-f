@@ -71,7 +71,7 @@
 }
 
 .header__theme-menu {
-  padding: 4px 0 24px 18px;
+  padding: 4px 0 21px 18px;
   color: var(--accent-color, #000);
   font-family: var(--accent-font, sans-serif);
   font-size: 14px;
@@ -86,7 +86,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 12px;
+  gap: 9px;
 }
 
 .theme-menu__button {
@@ -126,16 +126,28 @@
   position: absolute;
   opacity: 0.6;
   left: -14px;
+  animation-name: pointer-anim;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
 
+}
+
+@keyframes pointer-anim {
+  0% {
+    left: -14px;
+  }
+
+  100% {
+    left: -10px;
+  }
+  
 }
 
 .theme-menu__button:focus {
   outline: none;
   opacity: 0.6;
-}
-
-.theme-menu__button::after {
-  
 }
 
 .main {
@@ -203,8 +215,28 @@
   margin-top: 27px;
 }
 .button {
+  position: relative;
   border: transparent;
   background-color: transparent;
+  cursor: pointer;
+
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: 0.5s ease-in-out;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
 }
 
 .buttons {
@@ -217,7 +249,9 @@
 }
 
 .button__text {
-  color: var(--accent-color, #000);
+  position: relative;
+  mix-blend-mode: difference;
+  color: var(--difference-color, #FFF);
   font-family: var(--accent-font, sans-serif);
   font-size: 14px;
   
@@ -225,6 +259,15 @@
 
 .card__icon-button {
   padding-top: clamp(0.4375rem, 0.3935rem + 0.1878vw, 0.5625rem);
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.card__icon-button:focus {
+  outline: none;
+  outline: 2px solid var(--accent-color);
+  outline-offset: -2px;
 }
 
 .card__like-button {
@@ -233,6 +276,12 @@
   height: 38px;
   cursor: pointer;
   padding-top: 6px;
+  transition: box-shadow 0.3s ease;
+}
+
+.card__like-button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 0 var(--accent-color);
 }
 
 .button__save {
@@ -255,6 +304,8 @@
 }
 
 .button__save-svg {
+  color: var(--difference-color, #fff);
+  mix-blend-mode: difference;
   height: 21px;
   width: 21px;
 }
