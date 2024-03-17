@@ -310,6 +310,7 @@
 .dialog__save[open] {
   display: grid;
   padding: 30px;
+  background-color: var(--background-color);
   grid-template-columns: min-content 1fr;
   grid-template-rows: min-content 38px;
   column-gap: 20px;
@@ -317,6 +318,7 @@
   font-family: var(--accent-font, sans-serif);
   font-size: 14px;
   font-weight: 400;
+  border: 2px solid var(--accent-color);
 }
 
 .dialog__save[open] .button__save-svg {
