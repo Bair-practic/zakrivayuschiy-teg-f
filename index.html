@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light"/>
     <link rel="icon" href="./images/favicon.ico" sizes="any" />
     <link rel="icon" href="./svg/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./images/apple-touch-icon.png" />
@@ -17,8 +18,8 @@
   </head>
   <body class="page">
     <header class="header content-section-width">
-      <h1 class="header__title">&lt;/html&gt;</h1>
-      <h2 class="header__subtitle">закрывающий тег</h2>
+      <a class="header__title" aria-disabled="true">&lt;/html&gt;</a>
+      <h1 class="header__subtitle">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -47,9 +48,9 @@
     </header>
     <main class="main content-section-width">
       <article class="card">
-        <h3 class="card__title text">
+        <h2 class="card__title text">
           Фритрек и нулевой спринт: Подготовка к работе
-        </h3>
+        </h2>
         <div class="card__img-wrapper">
           <img
             class="card__img img1"
@@ -105,7 +106,7 @@
         </div>
       </article>
       <article class="card">
-        <h3 class="card__title text">1 спринт: Я — чистый лист</h3>
+        <h2 class="card__title text">1 спринт: Я — чистый лист</h2>
         <div class="card__img-wrapper">
           <img
             class="card__img img2"
@@ -163,7 +164,7 @@
         </div>
       </article>
       <article class="card">
-        <h3 class="card__title text">1 спринт: А если не получится?</h3>
+        <h2 class="card__title text">1 спринт: А если не получится?</h2>
         <div class="card__img-wrapper">
           <img
             class="card__img img3"
@@ -219,7 +220,7 @@
         </div>
       </article>
       <article class="card">
-        <h3 class="card__title text">2 спринт: Погоня за идеалом</h3>
+        <h2 class="card__title text">2 спринт: Погоня за идеалом</h2>
         <div class="card__img-wrapper">
           <img
             class="card__img img4"
@@ -277,7 +278,7 @@
         </div>
       </article>
       <article class="card">
-        <h3 class="card__title text">2 спринт: О тех, кто рядом</h3>
+        <h2 class="card__title text">2 спринт: О тех, кто рядом</h2>
         <div class="card__img-wrapper">
           <img
             class="card__img img5"
@@ -335,7 +336,7 @@
         </div>
       </article>
       <article class="card">
-        <h3 class="card__title text">3 спринт: Обходные стратегии</h3>
+        <h2 class="card__title text">3 спринт: Обходные стратегии</h2>
         <div class="card__img-wrapper">
           <img
             class="card__img img6"
@@ -391,7 +392,7 @@
         </div>
       </article>
       <article class="card">
-        <h3 class="card__title text">3 спринт: Когда опускаются руки</h3>
+        <h2 class="card__title text">3 спринт: Когда опускаются руки</h2>
         <div class="card__img-wrapper">
           <img
             class="card__img img7"
@@ -448,7 +449,7 @@
         </div>
       </article>
       <article class="card">
-        <h3 class="card__title text">«Сейчас я здесь»</h3>
+        <h2 class="card__title text">«Сейчас я здесь»</h2>
         <div class="card__img-wrapper">
           <img
             class="card__img img8"
@@ -537,14 +538,17 @@
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <h2 class="dialog__text">
-          Вставьте <br />дискету, чтобы <br />продолжить
+          Вставьте дискету,&nbsp;чтобы продолжить
         </h2>
-        <button
+        <form method="dialog" class="dialog__form">
+          <button
           class="button dialog__button"
-          onclick="window['dialog-id'].close();"
-        >
+          type="submit"
+          >
           <span class="dialog__button-text">ok</span>
-        </button>
+          </button>
+        </form>
+        
       </dialog>
     </main>
 
