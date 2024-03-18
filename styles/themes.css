@@ -15,3 +15,33 @@
                             repeating-linear-gradient(to bottom, #007f0c, #004306);
     --difference-color: #00CC14;
 }
+
+:root.theme-light {
+    --main-font: 'Inter-Variable';
+    --accent-font: 'Press Start 2P';
+    --main-font-width: 700;
+    --accent-font-width: 400;
+    --background-color: #FFFFFF;
+    --accent-color: #000000;
+    --background-gradient: 
+                            repeating-linear-gradient(to right,#d3d3d3,#d3d3d3 2px, transparent 2px, transparent 4px),
+                            repeating-linear-gradient(to bottom,#d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+                            repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+    --difference-color: #fff;
+    --heart-accent-color: #FF0000;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --accent-color: #00CC14;
+        --background-color: #000000;
+        --main-font-width: 785;
+        -accent-font-width: 465;
+        --background-gradient: 
+                            repeating-linear-gradient(to right,#000,#000 2px, transparent 2px, transparent 4px),
+                            repeating-linear-gradient(to bottom,#000, #000 2px, transparent 2px, transparent 4px),
+                            repeating-linear-gradient(to bottom, #007f0c, #004306);
+        --difference-color: #00CC14;
+    }
+}
